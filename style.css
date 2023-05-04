@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    gap: 60px;
+    padding: 30px;
+    height: 100vh;
+}
+
+.logo {
+    width: 200px;
+}
+
+aside {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main img {
+    width: 400px;
+}
