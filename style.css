@@ -2,24 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial;
 }
 
 body {
     overflow: hidden;
     display: flex;
     gap: 60px;
-    padding: 30px;
     height: 100vh;
 }
 
 .logo {
-    width: 200px;
+    width: 300px;
 }
 
 aside {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    min-width: 400px;
+    height: 100%;
+    padding: 30px;
+    z-index: 10;
 }
 
 .contact-info {
@@ -28,9 +35,16 @@ aside {
     flex-direction: column;
 }
 
+.contact-info h1 {
+    font-size: 60px;
+    margin-bottom: 16px;
+}
+
 .contact-info a {
     text-decoration: none;
     color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 main {
@@ -41,5 +55,109 @@ main {
 }
 
 main img {
-    width: 400px;
+    position: absolute;
+    max-height: 50vw;
+    max-width: 50vw;
+    opacity: 0;
+    animation: 48s slideShow ease-in-out infinite;
+}
+
+.artwork-2 {
+    animation-delay: 4s;
+}
+.artwork-3 {
+    animation-delay: 8s;
+}
+.artwork-4 {
+    animation-delay: 12s;
+}
+.artwork-5 {
+    animation-delay: 16s;
+}
+.artwork-6 {
+    animation-delay: 20s;
+}
+.artwork-7 {
+    animation-delay: 24s;
+}
+.artwork-8 {
+    animation-delay: 28s;
+}
+.artwork-9 {
+    animation-delay: 32s;
+}
+.artwork-10 {
+    animation-delay: 36s;
+}
+.artwork-11 {
+    animation-delay: 40s;
+}
+.artwork-12 {
+    animation-delay: 44s;
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    7% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    8% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+}
+
+@media only screen and (max-width: 1000px) { 
+    .logo {
+        width: 180px;
+    }
+    
+    aside {
+        padding: 20px;
+    }
+    
+    .contact-info {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+    }
+    
+    .contact-info h1 {
+        font-size: 60px;
+        margin-bottom: 16px;
+    }
+    
+    .contact-info a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    main img {
+        position: absolute;
+        max-height: 50vw;
+        max-width: 50vw;
+        opacity: 0;
+        animation: 48s slideShow ease-in-out infinite;
+    }
 }
