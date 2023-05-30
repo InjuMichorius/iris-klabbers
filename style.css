@@ -16,7 +16,6 @@
 }
 
 body {
-    overflow: hidden;
     display: flex;
     gap: 60px;
     height: 100vh;
