@@ -155,7 +155,7 @@ main img {
         flex-direction: column;
         justify-content: space-between;
         gap: 10px;
-        height: 100vh;
+        min-height: 100vh;
         max-width: 390px;
         margin: auto;
         padding: 15px;
@@ -191,7 +191,7 @@ main img {
     .contact-info-mobile h1 {
         font-size: 40px;
         margin-bottom: 23px;
-        color: red;
+        color: yellow;
     }
     
     .contact-info-mobile a {
@@ -211,8 +211,8 @@ main img {
         justify-content: center;
         width: 100%;
         padding-left: 0;
-        height: 0;
-        max-height: 0;
+        height: 100%;
+        max-height: 435px;
     }
     main img {
         position: absolute;
