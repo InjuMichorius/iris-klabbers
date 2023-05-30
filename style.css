@@ -150,7 +150,6 @@ main img {
 
 @media only screen and (max-width: 900px) {
     body {
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
