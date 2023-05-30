@@ -2,7 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Helvetica;
+}
+
+/* @font-face {
+    font-family: 'Helvetica';
+    src:  url('./fonts/helvetica-neue.otf') format('opentype');
+} */
+
+@font-face {
+    font-family: 'Helvetica';
+    src:  url('./fonts/helvetica-neue.ttf') format('truetypefont');
 }
 
 body {
@@ -13,7 +23,11 @@ body {
 }
 
 .logo {
-    width: 300px;
+    width: 270px;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 aside {
@@ -25,8 +39,13 @@ aside {
     flex-direction: column;
     min-width: 400px;
     height: 100%;
-    padding: 30px;
+    padding: 65px 53px;
     z-index: 10;
+    background-color: white;
+}
+
+.contact-info-mobile {
+    display: none;
 }
 
 .contact-info {
@@ -36,15 +55,15 @@ aside {
 }
 
 .contact-info h1 {
-    font-size: 60px;
-    margin-bottom: 16px;
+    font-size: 44px;
+    margin-bottom: 18px;
 }
 
 .contact-info a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    line-height: 30px;
 }
 
 main {
@@ -52,14 +71,19 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding-left: 200px;
 }
 
 main img {
     position: absolute;
-    max-height: 50vw;
-    max-width: 50vw;
+    max-height: 40vw;
+    max-width: 40vw;
     opacity: 0;
     animation: 48s slideShow ease-in-out infinite;
+}
+
+.artwork-1 {
+    width: 100%;
 }
 
 .artwork-2 {
@@ -115,50 +139,121 @@ main img {
     }
     100% {
         opacity: 0;
-        transform: translateX(30%);
     }
 }
 
-@media only screen and (max-width: 1000px) { 
+@media only screen and (max-width: 1300px) {
+    main {
+        padding-left: 300px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        height: 100vh;
+        max-width: 390px;
+        margin: auto;
+        padding: 15px;
+    }
+    
     .logo {
-        width: 180px;
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+        width: 360px;
     }
     
     aside {
-        padding: 20px;
-    }
-    
-    .contact-info {
+        position: relative;
+        top: 0;
+        left: 0;
         display: flex;
-        gap: 5px;
+        justify-content: space-between;
         flex-direction: column;
+        min-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .contact-info-mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact-info {
+        display: none;
     }
     
-    .contact-info h1 {
+    .contact-info-mobile h1 {
         font-size: 40px;
-        margin-bottom: 16px;
+        margin-bottom: 23px;
     }
     
-    .contact-info a {
+    .contact-info-mobile a {
         text-decoration: none;
         color: black;
-        font-size: 16px;
-        margin-bottom: 5px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .contact-info-mobile .right {
+        text-align: right;
     }
     
     main {
-        margin-top: -200px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
+        padding-left: 0;
+        height: 100%;
+        max-height: 510px;
     }
-    
     main img {
         position: absolute;
-        max-height: 80vw;
-        max-width: 80vw;
-        opacity: 0;
-        animation: 48s slideShow ease-in-out infinite;
+        width: 100%;
+        max-width: 360px;
+        max-height: 100%;
+    }
+    .artwork-1 {
+        width: 100%;
+    }
+    
+    .artwork-2 {
+        animation-delay: 4s;
+    }
+    .artwork-3 {
+        animation-delay: 8s;
+    }
+    .artwork-4 {
+        animation-delay: 12s;
+    }
+    .artwork-5 {
+        animation-delay: 16s;
+    }
+    .artwork-6 {
+        animation-delay: 20s;
+    }
+    .artwork-7 {
+        animation-delay: 24s;
+    }
+    .artwork-8 {
+        animation-delay: 28s;
+    }
+    .artwork-9 {
+        animation-delay: 32s;
+    }
+    .artwork-10 {
+        animation-delay: 36s;
+    }
+    .artwork-11 {
+        animation-delay: 40s;
+    }
+    .artwork-12 {
+        animation-delay: 44s;
     }
 }
