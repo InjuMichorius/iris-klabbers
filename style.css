@@ -191,6 +191,7 @@ main img {
     .contact-info-mobile h1 {
         font-size: 40px;
         margin-bottom: 23px;
+        color: red;
     }
     
     .contact-info-mobile a {
